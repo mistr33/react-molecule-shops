@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Controls from "./components/Controls";
 import ShopsTableHeader from "./components/ShopsTableHeader";
@@ -17,6 +16,9 @@ function App() {
       <div class="col">{x.name}</div>
       <div class="col">{x.boutique}</div>
       <div class="col">{x.status}</div>
+      <div class="col">{x.address}</div>
+      <div class="col">{x.samovivoz}</div>
+      <div class="col">{x.sort}</div>
     </div>
   ));
 
