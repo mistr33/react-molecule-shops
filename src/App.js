@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Controls from "./components/Controls";
+import ShopsTableHeader from "./components/ShopsTableHeader";
+
+const inputData = [
+  { id: 4, name: "store1", boutique: "byredo", status: "A" },
+  { id: 5, name: "store2", boutique: "vilhelm", status: "D" },
+  { id: 25, name: "store3", boutique: "penza", status: "A" },
+];
 
 function App() {
+  const stores = inputData;
+
+  const tableData = stores.map((x) => (
+    <div className="shopTableRow row">
+      <div class="col">{x.name}</div>
+      <div class="col">{x.boutique}</div>
+      <div class="col">{x.status}</div>
+    </div>
+  ));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section>
+        <div className="shopsTable grid">
+          <ShopsTableHeader />
+          <div className="shopsTableBody">{tableData}</div>
+        </div>
+      </section>
+      <section>
+        <Controls />
+      </section>
     </div>
   );
 }
