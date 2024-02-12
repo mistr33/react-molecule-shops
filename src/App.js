@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Controls from "./components/Controls";
 import ShopsTableHeader from "./components/ShopsTableHeader";
 
-//import MiniCalc from "./components/MiniCalc";
+import MiniCalc from "./components/MiniCalc";
 
 const inputDataTemp = [
   { id: 4, name: "store1", boutique: "byredo", status: "A" },
@@ -61,11 +61,10 @@ function App() {
       <section>
         <Controls />
       </section>
-      {/*
+
       <section>
         <MiniCalc />
       </section>
-  */}
     </div>
   );
 }
